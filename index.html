@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Happy 3rd Anniversary!</h1>
+            <p>To many more beautiful years together.</p>
+        </header>
+
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            
+            <div class="photos">
+                <!-- Add image URLs to the src attribute -->
+                <img src="image/IMG_20231013_153641.jpg" alt="Memory 1">
+                <img src="image/IMG_20231013_154108.jpg" alt="Memory 2">
+                <img src="image/IMG_20231013_160138.jpg" alt="Memory 3">
+                <img src="image/IMG_20231013_160140.jpg" alt="Memory 4">
+                <img src="image/IMG_20231013_160327.jpg" alt="Memory 5">
+                <img src="image/IMG_20231013_160404.jpg"alt="Memory 6">
+                
+                <img src="image/received_1116610622824330.jpeg" alt="Memory 7">
+                <img src="image/received_2151473585210524.jpeg" alt="Memory 8">
+
+            </div>
+        </section>
+
+        <div class="container">
+            
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
